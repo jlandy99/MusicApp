@@ -15,6 +15,7 @@
 		A164DF612643007900EA014A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A164DF5F2643007900EA014A /* LaunchScreen.storyboard */; };
 		A164DF6C2643007900EA014A /* MusicAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A164DF6B2643007900EA014A /* MusicAppTests.swift */; };
 		A164DF772643007900EA014A /* MusicAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A164DF762643007900EA014A /* MusicAppUITests.swift */; };
+		A164DF88264302A300EA014A /* SpotifyiOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A164DF87264302A300EA014A /* SpotifyiOS.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,6 +36,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		A11B5D3B2643051B00E653DF /* MusicApp-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "MusicApp-Bridging-Header.h"; sourceTree = "<group>"; };
 		A164DF512643007500EA014A /* MusicApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MusicApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A164DF542643007500EA014A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A164DF562643007500EA014A /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -49,6 +51,7 @@
 		A164DF722643007900EA014A /* MusicAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MusicAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A164DF762643007900EA014A /* MusicAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicAppUITests.swift; sourceTree = "<group>"; };
 		A164DF782643007900EA014A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A164DF87264302A300EA014A /* SpotifyiOS.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = SpotifyiOS.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +59,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A164DF88264302A300EA014A /* SpotifyiOS.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -99,6 +103,7 @@
 		A164DF532643007500EA014A /* MusicApp */ = {
 			isa = PBXGroup;
 			children = (
+				A164DF87264302A300EA014A /* SpotifyiOS.framework */,
 				A164DF542643007500EA014A /* AppDelegate.swift */,
 				A164DF562643007500EA014A /* SceneDelegate.swift */,
 				A164DF582643007500EA014A /* ViewController.swift */,
@@ -106,6 +111,7 @@
 				A164DF5D2643007900EA014A /* Assets.xcassets */,
 				A164DF5F2643007900EA014A /* LaunchScreen.storyboard */,
 				A164DF622643007900EA014A /* Info.plist */,
+				A11B5D3B2643051B00E653DF /* MusicApp-Bridging-Header.h */,
 			);
 			path = MusicApp;
 			sourceTree = "<group>";
@@ -438,13 +444,19 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 5N982D5Y38;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/MusicApp",
+				);
 				INFOPLIST_FILE = MusicApp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_BUNDLE_IDENTIFIER = com.johnlandy.MusicApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "MusicApp/MusicApp-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -457,13 +469,19 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 5N982D5Y38;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/MusicApp",
+				);
 				INFOPLIST_FILE = MusicApp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_BUNDLE_IDENTIFIER = com.johnlandy.MusicApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "MusicApp/MusicApp-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
